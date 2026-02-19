@@ -1,3 +1,4 @@
 print("meow")
+print("szia")
 
 

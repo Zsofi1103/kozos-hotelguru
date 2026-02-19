@@ -1,0 +1,211 @@
+# Git & GitHub Alapok – Gyors Jegyzet
+
+Ez a dokumentum a legfontosabb Git és GitHub parancsokat és alapfogalmakat tartalmazza csapatmunkához.
+Nem tartalmaz haladó dolgokat, csak a napi használathoz szükséges alapokat.
+
+
+# 1. Alapfogalmak
+
+## Repository (repo)
+A projekt mappája, amit a Git verziókövet.
+Lehet:
+
+* Lokális (a saját gépeden)
+* Távoli (GitHubon)
+
+## Branch
+Külön "fejlesztési ág". Általában:
+
+* main → fő ág
+* feature-xyz → külön fejlesztési ág
+
+## Commit
+Egy mentési pont a projekt történetében.
+
+## Pull
+A GitHubon lévő legfrissebb változások letöltése.
+
+## Push
+A saját változtatásaid feltöltése GitHubra.
+
+
+# 2. Projekt letöltése GitHubról (Clone)
+
+Ha még nincs a gépeden a projekt:
+
+```
+git clone REPO_URL
+```
+
+Példa:
+
+```
+git clone https://github.com/csapat/projekt.git
+```
+
+Ez létrehoz egy mappát a projekttel.
+
+---
+
+# 3. Mindennapi munkafolyamat
+
+## 1️⃣ Frissítés munka előtt
+
+```
+git pull
+```
+
+Mindig ezzel kezdj.
+
+---
+
+## 2️⃣ Módosítások megnézése
+
+```
+git status
+```
+
+Megmutatja:
+
+* mely fájlok változtak
+* melyek nincsenek még hozzáadva
+
+---
+
+## 3️⃣ Változtatások hozzáadása
+
+Összes fájl:
+
+```
+git add .
+```
+
+Egy konkrét fájl:
+
+```
+git add fajlnev.js
+```
+
+---
+
+## 4️⃣ Commit készítése
+
+```
+git commit -m "Rövid leírás mit csináltál"
+```
+
+Példa:
+
+```
+git commit -m "Login form javítása"
+```
+
+---
+
+## 5️⃣ Feltöltés GitHubra
+
+```
+git push
+```
+
+---
+
+# 4. Branch kezelés
+
+## Aktuális branch megnézése
+
+```
+git branch
+```
+
+## Új branch létrehozása
+
+```
+git checkout -b uj-branch-nev
+```
+
+## Átváltás másik branchre
+
+```
+git checkout branch-nev
+```
+
+## Branch feltöltése első push-nál
+
+```
+git push -u origin branch-nev
+```
+
+---
+
+# 5. Remote (GitHub kapcsolat)
+
+## Megnézni milyen távoli repo van beállítva
+
+```
+git remote -v
+```
+
+## Remote hozzáadása (ha nincs)
+
+```
+git remote add origin REPO_URL
+```
+
+---
+
+# 6. Hasznos ellenőrző parancsok
+
+## Commit előzmények
+
+```
+git log
+```
+
+## Rövid log
+
+```
+git log --oneline
+```
+
+---
+
+# 7. VS Code grafikus használat
+
+Bal oldalon a Source Control ikon:
+
+1. Látod a módosított fájlokat
+2. Beírod a commit üzenetet
+3. ✓ (Commit)
+4. Sync / Push gomb
+
+---
+
+# 8. Tipikus napi rutin csapatmunkában
+
+1. git pull
+2. Dolgozol
+3. git add .
+4. git commit -m "mit csináltál"
+5. git push
+
+---
+
+# 9. Ha hiba van push-nál
+
+Ha ezt írja:
+
+"Updates were rejected"
+
+Akkor először:
+
+```
+git pull
+```
+
+Majd újra:
+
+```
+git push
+```
+

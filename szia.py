@@ -1,2 +1,1 @@
-print("meow"
-      )
+print("szia")

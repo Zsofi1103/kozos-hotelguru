@@ -1,0 +1,78 @@
+FLASK ALAPPARANCSOK
+===================
+
+1. VIRTUAL ENVIRONMENT AKTIVÁLÁSA
+   Windows:    venv\Scripts\activate
+
+2. SZÜKSÉGES CSOMAGOK TELEPÍTÉSE
+   pip install -r requirements.txt
+
+3. FLASK FEJLESZTŐI SZERVER INDÍTÁSA
+   flask run
+   vagy
+   python -m flask run
+
+4. ADATBÁZIS MIGRÁCIÓK (Flask-Migrate használatával)
+   
+   - Migrációk inicializálása (első alkalommal):
+     flask db init
+   
+   - Migráció létrehozása (modell változásai után):
+     flask db migrate -m "Brief description"
+   
+   - Migráció alkalmazása az adatbázisra:
+     flask db upgrade
+   
+   - Migráció visszavonása:
+     flask db downgrade
+   
+   - Migrációk előzményének megtekintése:
+     flask db history
+   
+   - Aktuális verzió lekérdezése:
+     flask db current
+
+5. FLASK SHELL (interaktív shell a Flask kontextusban)
+   flask shell
+
+6. ADATBÁZIS RESETELÉSE
+   # Az alap_config.py-ban vagy app.py-ban:
+   db.create_all()  # Az összes táblát létrehozza
+   db.drop_all()    # Az összes táblát törli
+
+7. KÖRNYEZETI VÁLTOZÓK BEÁLLÍTÁSA
+   Linux/Mac:  export FLASK_APP=app.py
+               export FLASK_ENV=development
+   
+   Windows:    set FLASK_APP=app.py
+               set FLASK_ENV=development
+
+8. PYTHON VERZIÓ ELLENŐRZÉSE
+   python --version
+   vagy
+   python -V
+
+9. TELEPÍTETT CSOMAGOK LISTÁZÁSA
+   pip list
+   pip freeze
+
+10. REQUIREMENTS.TXT FRISSÍTÉSE
+    pip freeze > requirements.txt
+
+11. FLASK DEBUG MÓD ENGEDÉLYEZÉSE
+    - A requirements.txt-ben:
+      Flask==verziószám
+      python-dotenv
+    
+    - .env fájlban:
+      FLASK_ENV=development
+      FLASK_DEBUG=1
+    
+    - Parancssorból:
+      flask run --debug
+
+HASZNOS HINTS:
+- A Ctrl+C leállítja a fejlesztői szervert
+- Max. 1 migráció per session a biztonság érdekében
+- Mindig commit az alkalmazást, mielőtt új migrációt készítesz
+- A migrációs fájlok verziókövetelésen való kezelése kötelező

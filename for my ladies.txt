@@ -1,0 +1,18 @@
+na girls annyit akarok mondani hogy egy branchen dolgozzunk, ami a main
+ne legyen ez a helobelo meg vikiproba, majd töröljétek
+mindenki a main branchen legyen, ezen belül hozzuk létre a fileokat
+majd vasárnap megcsináljuk együtt meg a copilot hallgatói előfizetést is
+
+Kinga akkor megcsinálja a database alapot 
+Mi meg összeírjuk a tervezett funkciókat
+
+UML diagramot közösen csinálunk egy újat a régi alapján csak kicsit pontosabbat
+
+meg majd beosszuk a feladatokat is szépen
+
+
+fontos az is hogy mindenképp írjátok be a csoportba hogy ha csináltatok valamit, 
+akár egy sornál is pusholjatok fel nehogy átírjuk egymásét
+
+ne feledjétek mielőtt dolgozni kezdek git pull
+a többi lépés pedig a puska.txt-ben található

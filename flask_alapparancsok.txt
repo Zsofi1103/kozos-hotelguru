@@ -1,4 +1,4 @@
-FLASK ALAPPARANCSOK
+.venv\Scripts\activateFLASK ALAPPARANCSOK
 ===================
 
 1. VIRTUAL ENVIRONMENT AKTIVÁLÁSA
